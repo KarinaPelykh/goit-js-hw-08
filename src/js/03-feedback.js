@@ -24,9 +24,12 @@ input.value = userInfo.email;
      }
 const feedbackFormSubmit = (event) => {
     event.preventDefault()
-    console.log({
+    if (input.value === "" || textarea.value === "") {
+        return
+    }else{ console.log({
         email: input.value,
-    message:textarea.value})
+    message:textarea.value})}
+   
     
     if (input.value === '' || textarea.value === '') {
         return
